@@ -29,7 +29,7 @@ def draw_triangles_with_points(screen, image):
         # Parte esquerda do triângulo (encolhendo)
         for y in range(left_height):
             scaled_y = int(y / (left_height + 1) * image_height)
-            color = image.get_at((int(x / half_width * image_width), scaled_y))
+            color = image.get_at((int(half_width-x / half_width * image_width), scaled_y))
             screen.set_at((half_width + x, (screen_height - left_height) // 2 + y), color)
 
         # Parte direita do triângulo (encolhendo)
